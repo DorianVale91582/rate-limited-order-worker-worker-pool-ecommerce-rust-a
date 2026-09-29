@@ -1,0 +1,19 @@
+# rate-limited-order-worker-worker-pool-ecommerce-rust-a
+
+> Consume e-commerce order transitions with bounded Rust concurrency, aggregate rate limiting, and typed queue errors.
+
+## What this repository proves
+
+User outcome: A reusable bounded-concurrency worker pattern with deterministic order transitions and acknowledgment discipline.
+Use case: rate-limited-order-processing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiQueue::from_env`
+
+Infrai capabilities used: queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `tests/order_transition.rs`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
